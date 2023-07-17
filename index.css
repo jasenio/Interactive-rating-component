@@ -1,0 +1,123 @@
+:root{
+    --color-white: hsl(0, 0%, 100%);
+    --color-lightGrey: hsl(217, 12%, 63%) ;
+    --color-mediumGrey: hsl(216, 12%, 54%);
+    --color-blue: hsl(213, 19%, 18%);
+    --color-darkBlue: hsl(216, 12%, 8%);
+    --color-orange: hsl(25, 97%, 53%);
+}
+html{
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.rating-component{
+    margin: 50px auto;
+
+    aspect-ratio: 1/1;
+    width: 420px;
+    padding: 4%;
+    border-radius: 5%;
+    background-color: var(--color-darkBlue);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.star{
+    width: 15%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-blue);
+    border-radius: 1000000px;
+
+    margin-bottom: 2em;
+}
+.rating-component > .rating-state > h1{
+    color: var(--color-white);
+}
+.rating-component > .rating-state > p{
+    color: var(--color-mediumGrey);
+}
+.rating-component > .rating-state > .rating-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.rating-buttons input[type="radio"]{
+    position: fixed;
+    opacity: 0;
+    width: 0;
+}
+.rating-buttons label{
+    aspect-ratio: 1/1;
+    width: 15%;
+    border-radius: 50%;
+    background-color: var(--color-blue);
+    color: var(--color-mediumGrey);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rating-buttons label:hover{
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+.rating-buttons input[type="radio"]:checked + label{
+    background-color: var(--color-lightGrey);
+    color: var(--color-white);
+}
+button{
+    aspect-ratio: 8/1;
+    width: 100%;
+    border: 0px;
+    border-radius: 100000000px;
+
+    background-color: var(--color-orange);
+    color: white;
+    font-weight: 700;
+
+    margin-top: 2em;
+}
+button:hover{
+    background-color: var(--color-white);
+    color: var(--color-orange);
+}
+.thank-state{
+    aspect-ratio: 1/1;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.thank-state > .phone-icon{
+    margin-bottom: 1em;
+}
+.selection{
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+    width: 55%;
+    height: 8%;
+    border-radius: 10000px;
+
+    background-color: var(--color-blue);
+    color: var(--color-orange);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thank-state > h1{
+    margin: 0;
+    color: var(--color-white);
+}
+.thank-state > .end {
+    color: var(--color-lightGrey);
+    text-align: center;
+}
